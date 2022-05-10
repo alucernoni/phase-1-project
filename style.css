@@ -19,3 +19,17 @@ nav li {
     text-decoration: none;
     font-weight: bold;
 }
+
+#category_options {
+    display: inline-flex;
+    overflow-x: auto;
+    margin: 1rem 0;
+    max-width: calc(100vw - 2rem);
+  }
+
+#recipe_image {
+    flex: 0 1 auto;
+    height:auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
