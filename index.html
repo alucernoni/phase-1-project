@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
         <title>Recipe for Disaster</title>
         <link rel="stylesheet" href="style.css"/>
         <script src="index.js"></script>
     </head>
 
+<!--HEADER AREA-->
     <body>
         <h1>
             Recipe Finder
@@ -21,29 +23,32 @@
 
 
 <!--MAIN IMAGES-->
-        <main>
-            <div id="category_options">
+        <div id="category_options">
                 <!--category options-->
-                <img
-                id="recipe_image"/>
-                
-                <h3 id="recipe-li"></h3>
-                
-            </div>
-            </main>
-
-
-            <div id="recipe_details">
-                <!--recipe details-->
-                <img id="main_image"/>
-                <h2 id= "main_recipe_name"> </h2>
+          <figure id="image-container">
+            <img id="recipe_image"/>
+            <figcaption id="recipe-li"></figcaption>
+          </figure>      
+            
+           <!---- <h3 id="recipe-li"></h3> -->
+   
+        </div>
+           
+<!--RECIPE DETAILS-->
+        <div id="recipe_details">
+              
+            <img id="main_image"/>
+            <h2 id= "main_recipe_name"> </h2>
+        </div>
+        <div>            
+                 <!--list of ingredients (STRETCH)
                 <ul>
-                    <!--list of ingredients (STRETCH)-->
-                </ul>
+                    </ul
+                -->
                 <p id="directions">
                     <!--recipe directions-->
                 </p>
-            </div>
-        
+
+        </div>
     </body>
 </html>
