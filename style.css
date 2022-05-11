@@ -25,6 +25,7 @@ nav li {
     overflow-x: auto;
     margin: 1rem 0;
     max-width: calc(100vw - 2rem);
+    border-radius: 8px
   }
 
 #recipe_image {
@@ -33,3 +34,19 @@ nav li {
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
+#recipe_image h3 {
+    
+}
+
+
+
+/*
+
+
+
+
+
+
+
+*/

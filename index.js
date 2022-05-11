@@ -43,19 +43,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             recipeImageContainer.append(recipeImage, recipeTitle)
 
-            // recipeImage.addEventListener('click', (e) => {
-            //     // when category clicked display image of dish and dish title
-            //     fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealItem.idMeal) // our category goes in here - need to change
-            //     .then(resp => resp.json())
-            //     .then(recipeName => {
-            //         (recipeName.idMeal)
-            //         console.log(recipeName)
 
-            //     })
-            // })
+
+            recipeImage.addEventListener('click', (e) => {
+                // when category clicked display image of dish and dish title
+                fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealItem.idMeal) // our category goes in here - need to change
+                .then(resp => resp.json())
+                .then(mealDetail => {
+                    instructions(mealDetail.meals)
+                })
+            })
         })
     }
-})
 
+    const instructions= (mealDetail) => {
+        const directions= document.querySelector('#directions')
+        
+
+        mealDetail.forEach(element => {
+            directions.textContent= element.strInstructions
+            console.log(element.strInstructions)
+    })
+    }
+        
+        
+
+})
 
 
