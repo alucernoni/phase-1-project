@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(mealDetail => {
                     instructions(mealDetail.meals)
                 })
+
+               // e.target.style.border= "5px solid grey"
+        
             })
+            
         })
     }
 
