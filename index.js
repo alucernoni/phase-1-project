@@ -37,12 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const recipeImage= document.createElement('img')
             recipeImage.src= mealItem.strMealThumb
+            recipeImage.classList = ''
+            
 
             const recipeTitle= document.createElement('h2')
             recipeTitle.textContent= mealItem.strMeal
 
             recipeImageContainer.append(recipeImage, recipeTitle)
-
 
 
             recipeImage.addEventListener('click', (e) => {
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     instructions(mealDetail.meals)
                 })
 
-               // e.target.style.border= "5px solid grey"
+                toggleBorder(e.target)
         
             })
             
@@ -69,8 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(element.strInstructions)
     })
     }
-        
-        
+
+    const toggleBorder = (element) => {
+        element.parentElement.querySelectorAll('img').forEach(ele => ele.classList.remove('border'))
+        element.classList.add('border')
+    }
+
 
 })
 

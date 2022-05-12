@@ -45,10 +45,15 @@ nav li {
     margin-left: 10px;
     cursor: pointer;
     border-radius: 10px; 
-    border-width: 30px;
     width: 250px;
     
 }
+
+img.border {
+    border: solid grey;
+    border-width: 5px;
+}
+
 
 .active, .img-active:hover{
     border-color: black;
